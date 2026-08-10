@@ -1,0 +1,52 @@
+# Verilog Down Counter
+
+A simple parameterized **Down Counter** designed using Verilog HDL.
+
+## Description
+
+The counter decreases its value by `1` on every positive edge of the clock when `enable` is high.
+
+When `reset` is asserted, the counter is initialized to its maximum value.
+
+For a 4-bit counter, the sequence is:
+
+`15 → 14 → 13 → ... → 2 → 1 → 0 → 15`
+
+## Features
+
+* Parameterized counter width
+* Synchronous reset
+* Enable control
+* Counts down on every positive clock edge
+* Includes a Verilog testbench
+
+## Files
+
+```text
+down-counter/
+├── down_counter.v
+├── down_counter_tb.v
+└── README.md
+```
+
+## Inputs and Outputs
+
+| Signal   | Direction | Description                     |
+| -------- | --------- | ------------------------------- |
+| `clk`    | Input     | Clock signal                    |
+| `reset`  | Input     | Resets counter to maximum value |
+| `enable` | Input     | Enables counting                |
+| `count`  | Output    | Current counter value           |
+
+## Example
+
+For `WIDTH = 4`:
+
+```text
+Reset = 1  →  Count = 15
+Reset = 0, Enable = 1
+
+15 → 14 → 13 → 12 → 11 → ... → 2 → 1 → 0 → 15
+```
+
+## Simulation

@@ -1,0 +1,39 @@
+## 🧪 Simulation Output
+
+The 4-bit shift register was simulated using a Verilog testbench. The testbench applies a reset signal and then shifts the serial input data into the register on each rising edge of the clock.
+
+### Input Sequence
+
+```text
+Serial Input: 1 → 0 → 1 → 1
+```
+
+### Expected Output
+
+| Clock Cycle | Reset | Serial Input | `Q[3:0]` |
+| ----------: | ----: | -----------: | -------: |
+|           0 |     1 |            0 |   `0000` |
+|           1 |     0 |            1 |   `0001` |
+|           2 |     0 |            0 |   `0010` |
+|           3 |     0 |            1 |   `0101` |
+|           4 |     0 |            1 |   `1011` |
+
+### Simulation Waveform
+
+```text
+Clock
+      ┌───┐   ┌───┐   ┌───┐   ┌───┐
+──────┘   └───┘   └───┘   └───┘   └───
+
+Reset
+───────┐
+       └──────────────────────────────
+
+Serial_in
+────────┐   ┌───────┐       ┌────────
+        └───┘       └───────┘
+
+Q[3:0]
+0000 ───► 0001 ───► 0010 ───► 0101 ───► 1011
+         ↑          ↑          ↑          ↑
+       Clock 1    Clock 2    Clock 3    Clock 4

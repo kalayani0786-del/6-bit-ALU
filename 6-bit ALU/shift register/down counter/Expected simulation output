@@ -1,0 +1,12 @@
+Time = 0   | Reset = 1 | Enable = 0 | Count = 15
+Time = 10  | Reset = 0 | Enable = 1 | Count = 15
+Time = 15  | Reset = 0 | Enable = 1 | Count = 14
+Time = 25  | Reset = 0 | Enable = 1 | Count = 13
+Time = 35  | Reset = 0 | Enable = 1 | Count = 12
+Time = 45  | Reset = 0 | Enable = 1 | Count = 11
+Time = 55  | Reset = 0 | Enable = 1 | Count = 10
+Time = 65  | Reset = 0 | Enable = 1 | Count = 9
+Time = 75  | Reset = 0 | Enable = 1 | Count = 8
+Time = 85  | Reset = 0 | Enable = 1 | Count = 7
+Time = 95  | Reset = 0 | Enable = 1 | Count = 6
+Time = 105 | Reset = 0 | Enable = 1 | Count = 5

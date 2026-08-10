@@ -1,0 +1,30 @@
+# 6-Bit ALU Simulation Output
+
+## Simulation Results
+
+The 6-bit ALU was simulated using different input values and all eight supported operations were verified successfully.
+
+### Test Cases
+
+| Time (ns) |  A |  B | Opcode | Operation | Result | Carry | Zero |
+| --------: | -: | -: | :----: | :-------- | -----: | :---: | :--: |
+|         0 | 10 |  5 |  `000` | ADD       |     15 |   0   |   0  |
+|        10 | 10 |  5 |  `001` | SUB       |      5 |   0   |   0  |
+|        20 | 42 | 51 |  `010` | AND       |     34 |   0   |   0  |
+|        30 | 42 | 51 |  `011` | OR        |     59 |   0   |   0  |
+|        40 | 42 | 51 |  `100` | XOR       |     25 |   0   |   0  |
+|        50 | 42 | 51 |  `101` | NOT A     |     21 |   0   |   0  |
+|        60 | 20 |  5 |  `110` | INC A     |     21 |   0   |   0  |
+|        70 | 20 |  5 |  `111` | DEC A     |     19 |   0   |   0  |
+
+## Console Output
+
+```text
+Time=0   | A=10 | B=5 | Opcode=000 | Result=15 | Carry=0 | Zero=0
+Time=10  | A=10 | B=5 | Opcode=001 | Result=5  | Carry=0 | Zero=0
+Time=20  | A=42 | B=51 | Opcode=010 | Result=34 | Carry=0 | Zero=0
+Time=30  | A=42 | B=51 | Opcode=011 | Result=59 | Carry=0 | Zero=0
+Time=40  | A=42 | B=51 | Opcode=100 | Result=25 | Carry=0 | Zero=0
+Time=50  | A=42 | B=51 | Opcode=101 | Result=21 | Carry=0 | Zero=0
+Time=60  | A=20 | B=5 | Opcode=110 | Result=21 | Carry=0 | Zero=0
+Time=70  | A=20 | B=5 | Opcode=111 | Result=19 | Carry=0 | Zero=0
